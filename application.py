@@ -33,12 +33,12 @@ def main_page_GET():
 @app.route("/", methods=["POST"])
 def main_page_POST():
 
-#    cn,cur = connectSQL()
+    cn,cur = connectSQL()
 
-#    cur.execute("select * from Tbl_D_注文書番号")
-#    rows = cur.fetchall()
-    rows = [['1','2021-05-01','入庫','AAAA'],['2','2021-05-02','入庫','BBBB'],['3','2021-05-01','出庫','CCCC'],['4','2021-05-03','入庫','DDDD'],['5','2021-05-01','出庫','EEEE'],['6','2021-05-02','入庫','FFFF'],['7','2021-05-04','出庫','GGGG']]
-#    closeSQL(cur,cn)
+    cur.execute("select * from Table_D_テストテーブル")
+    rows = cur.fetchall()
+#    rows = [['1','2021-05-01','入庫','AAAA'],['2','2021-05-02','入庫','BBBB'],['3','2021-05-01','出庫','CCCC'],['4','2021-05-03','入庫','DDDD'],['5','2021-05-01','出庫','EEEE'],['6','2021-05-02','入庫','FFFF'],['7','2021-05-04','出庫','GGGG']]
+    closeSQL(cur,cn)
 
     rows2 = []
 
