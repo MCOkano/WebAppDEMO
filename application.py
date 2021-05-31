@@ -58,7 +58,7 @@ def main_page_POST():
                     add_data = r[0] , r[1] , r[2] , r[3]
                     rows2.append(add_data)
                 print(rows2)
-
+ 
         print("rows2 count:" + str(len(rows2)))
         if len(rows2) == 0:
             text = "該当するデータがありませんでした。"
