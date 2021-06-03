@@ -67,8 +67,31 @@ def main_page_POST():
             return render_template("page.html",text=text,arr=rows2)
 
     else:
-        text = "検索日が入力されていないか、正しくありません。"     
-        return render_template("page_top.html",text=text)
+
+        text = "検索日の指定はありません。"
+        for r in rows:
+            if search_kind != 'なし':
+                if search_kind == r[2]:
+                    add_data = r[0] , r[1] , r[2] , r[3]
+                    rows2.append(add_data)
+            else:
+                add_data = r[0] , r[1] , r[2] , r[3]
+                rows2.append(add_data)
+                print(rows2)
+ 
+        print("rows2 count:" + str(len(rows2)))
+        if len(rows2) == 0:
+            text = "該当するデータがありませんでした。"
+            return render_template("page_top.html",text=text)
+        else:
+            return render_template("page.html",text=text,arr=rows2)
+
+
+
+
+
+
+
 
 ## 実行
 if __name__ == "__main__":
