@@ -27,7 +27,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def main_page_GET():
-    text = "ここに結果が出力されます"
+    text = "ここに検索結果が出力されます"
     return render_template("page_top.html",text=text)
 
 @app.route("/", methods=["POST"])
@@ -47,7 +47,7 @@ def main_page_POST():
     print("検索日付：" + searchdate)
     print("検索種別：" + search_kind)
     if searchdate != "":
-        text = "入力された検索日は" + searchdate + "です。"
+        text = "検索日付［" + searchdate + "］検索条件［" + search_kind + "］で検索しました。"
         for r in rows:
             if searchdate == r[1]:
                 if search_kind != 'なし':
@@ -68,7 +68,7 @@ def main_page_POST():
 
     else:
 
-        text = "検索日の指定はありません。"
+        text = "検索日付［なし］検索条件［" + search_kind + "］で検索しました。"
         for r in rows:
             if search_kind != 'なし':
                 if search_kind == r[2]:

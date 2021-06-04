@@ -2,7 +2,14 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title>テスト</title>
+        <title>登録データ検索</title>
+        <style type="text/css">
+
+         textdat {
+            color: blue;
+         }         
+        </style>
+
     </head>
     <body>
       <form action = "/" method = "POST">
@@ -17,16 +24,18 @@
          </p>
          <label for="searchdate">検索日付を入力</label>
          <input type="date" name="searchdate" id="searchdate">
-         <br>
+         <p>※日付指定がない場合は、検索条件での全件検索となります</p>
          <button type="submit">検索</button>
 
          </div>
       </form>
          <br>
          <div style="border: #ffb6c1 solid 1px; font-size: 100%; padding: 20px;">
-            <h1>出力</h1>
-            <p>{{text}}</p>
-         </div>
+            <h1>検索結果</h1>
+            <textdat>
+              <p>{{text}}</p>
+            </textdat>
+            </div>
 
    </body>
 </html>
