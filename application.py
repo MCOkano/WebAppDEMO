@@ -52,10 +52,10 @@ def main_page_POST():
             if searchdate == r[1]:
                 if search_kind != 'なし':
                     if search_kind == r[2]:
-                        add_data = r[0] , r[1] , r[2] , r[3]
+                        add_data = r[0] , r[1] , r[2] , r[3],r[4]
                         rows2.append(add_data)
                 else:
-                    add_data = r[0] , r[1] , r[2] , r[3]
+                    add_data = r[0] , r[1] , r[2] , r[3],r[4]
                     rows2.append(add_data)
                 print(rows2)
  
@@ -72,10 +72,10 @@ def main_page_POST():
         for r in rows:
             if search_kind != 'なし':
                 if search_kind == r[2]:
-                    add_data = r[0] , r[1] , r[2] , r[3]
+                    add_data = r[0] , r[1] , r[2] , r[3],r[4]
                     rows2.append(add_data)
             else:
-                add_data = r[0] , r[1] , r[2] , r[3]
+                add_data = r[0] , r[1] , r[2] , r[3],r[4]
                 rows2.append(add_data)
                 print(rows2)
  

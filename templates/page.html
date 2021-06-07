@@ -37,9 +37,9 @@
 
          <table border="1" bordercolor = #6A5ACD width="600">
             <tr bgcolor=#00FFFF>
-               <th width="110">ID</th>
                <th width="110">登録日付</th>
                <th width="85">入庫/出庫</th>
+               <th width="85">注文番号</th>
                <th>内容</th>
             </tr>
          </table>
@@ -48,10 +48,10 @@
             <table border="1" bordercolor = #6A5ACD width="600">
                {% for i in arr %}   
                   <tr>
-                     <td width="110">{{ i[0] }}</td>
-                     <td width="110" align="center">{{ i[1] }}</td>
-                     <td width="85" align="center">{{ i[2] }}</td>
-                     <td>{{ i[3] }}</td>
+                     <td width="110">{{ i[1] }}</td>
+                     <td width="110" align="center">{{ i[2] }}</td>
+                     <td width="85" align="center">{{ i[3] }}</td>
+                     <td>{{ i[4] }}</td>
                   </tr>
                {% endfor %}
 
