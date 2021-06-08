@@ -35,23 +35,23 @@
             <p>{{text2}}</p>
          </textdat>
 
-         <table border="1" bordercolor = #6A5ACD width="600">
+         <table border="1" bordercolor = #6A5ACD width="650">
             <tr bgcolor=#00FFFF>
                <th width="110">登録日付</th>
                <th width="85">入庫/出庫</th>
-               <th width="85">注文番号</th>
+               <th width="110">注文番号</th>
                <th>内容</th>
             </tr>
          </table>
 
-         <div style = "overflow-y: scroll; height: 100px; width: 620px; bgcolor:#FF0000;">
-            <table border="1" bordercolor = #6A5ACD width="600">
+         <div style = "overflow-y: scroll; height: 200px; width: 670px; bgcolor:#FF0000;">
+            <table border="1" bordercolor = #6A5ACD width="650">
                {% for i in arr %}   
                   <tr>
                      <td width="110">{{ i[1] }}</td>
-                     <td width="110" align="center">{{ i[2] }}</td>
-                     <td width="85" align="center">{{ i[3] }}</td>
-                     <td>{{ i[4] }}</td>
+                     <td width="85" align="center">{{ i[2] }}</td>
+                     <td width="110" ">{{ i[4] }}</td>
+                     <td>{{ i[3] }}</td>
                   </tr>
                {% endfor %}
 
